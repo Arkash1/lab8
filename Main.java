@@ -14,14 +14,14 @@ class Person {
     }
 
     public void displayInfo() {
-        System.out.println("Имя: " + name +
-                ", Фамилия: " + surname +
-                ", Год рождения: " + birthYear);
+        System.out.println("РРјСЏ: " + name +
+                ", Р¤Р°РјРёР»РёСЏ: " + surname +
+                ", Р“РѕРґ СЂРѕР¶РґРµРЅРёСЏ: " + birthYear);
     }
 
     public void readBookAboutCar(Book book, Car car) {
-        System.out.println(name + " читает книгу " + book.getTitle() +
-                " про машину " + car.getBrand());
+        System.out.println(name + " С‡РёС‚Р°РµС‚ РєРЅРёРіСѓ " + book.getTitle() +
+                " РїСЂРѕ РјР°С€РёРЅСѓ " + car.getBrand());
     }
 
     public String getName() { return name; }
@@ -41,9 +41,9 @@ class Car {
     }
 
     public void displayInfo() {
-        System.out.println("Марка: " + brand +
-                ", Год выпуска: " + year +
-                ", Объем двигателя: " + engineVolume + "л");
+        System.out.println("РњР°СЂРєР°: " + brand +
+                ", Р“РѕРґ РІС‹РїСѓСЃРєР°: " + year +
+                ", РћР±СЉРµРј РґРІРёРіР°С‚РµР»СЏ: " + engineVolume + "Р»");
     }
 
     public String getBrand() { return brand; }
@@ -63,9 +63,9 @@ class Book {
     }
 
     public void displayInfo() {
-        System.out.println("Название: " + title +
-                ", Автор: " + author +
-                ", Год выпуска: " + year);
+        System.out.println("РќР°Р·РІР°РЅРёРµ: " + title +
+                ", РђРІС‚РѕСЂ: " + author +
+                ", Р“РѕРґ РІС‹РїСѓСЃРєР°: " + year);
     }
 
     public String getTitle() { return title; }
@@ -77,43 +77,43 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Ввод данных человека
-        System.out.println("Введите данные человека:");
-        System.out.print("Имя: ");
+        // Р’РІРѕРґ РґР°РЅРЅС‹С… С‡РµР»РѕРІРµРєР°
+        System.out.println("Р’РІРµРґРёС‚Рµ РґР°РЅРЅС‹Рµ С‡РµР»РѕРІРµРєР°:");
+        System.out.print("РРјСЏ: ");
         String name = scanner.nextLine();
-        System.out.print("Фамилия: ");
+        System.out.print("Р¤Р°РјРёР»РёСЏ: ");
         String surname = scanner.nextLine();
-        System.out.print("Год рождения: ");
+        System.out.print("Р“РѕРґ СЂРѕР¶РґРµРЅРёСЏ: ");
         int birthYear = scanner.nextInt();
-        scanner.nextLine(); // Очистка буфера
+        scanner.nextLine(); // РћС‡РёСЃС‚РєР° Р±СѓС„РµСЂР°
 
-        // Ввод данных автомобиля
-        System.out.println("\nВведите данные автомобиля:");
-        System.out.print("Марка: ");
+        // Р’РІРѕРґ РґР°РЅРЅС‹С… Р°РІС‚РѕРјРѕР±РёР»СЏ
+        System.out.println("\nР’РІРµРґРёС‚Рµ РґР°РЅРЅС‹Рµ Р°РІС‚РѕРјРѕР±РёР»СЏ:");
+        System.out.print("РњР°СЂРєР°: ");
         String brand = scanner.nextLine();
-        System.out.print("Год выпуска: ");
+        System.out.print("Р“РѕРґ РІС‹РїСѓСЃРєР°: ");
         int carYear = scanner.nextInt();
-        System.out.print("Объем двигателя: ");
+        System.out.print("РћР±СЉРµРј РґРІРёРіР°С‚РµР»СЏ: ");
         double engineVolume = scanner.nextDouble();
-        scanner.nextLine(); // Очистка буфера
+        scanner.nextLine(); // РћС‡РёСЃС‚РєР° Р±СѓС„РµСЂР°
 
-        // Ввод данных книги
-        System.out.println("\nВведите данные книги:");
-        System.out.print("Название: ");
+        // Р’РІРѕРґ РґР°РЅРЅС‹С… РєРЅРёРіРё
+        System.out.println("\nР’РІРµРґРёС‚Рµ РґР°РЅРЅС‹Рµ РєРЅРёРіРё:");
+        System.out.print("РќР°Р·РІР°РЅРёРµ: ");
         String title = scanner.nextLine();
-        System.out.print("Автор: ");
+        System.out.print("РђРІС‚РѕСЂ: ");
         String author = scanner.nextLine();
-        System.out.print("Год выпуска: ");
+        System.out.print("Р“РѕРґ РІС‹РїСѓСЃРєР°: ");
         int bookYear = scanner.nextInt();
-        scanner.nextLine(); // Очистка буфера
+        scanner.nextLine(); // РћС‡РёСЃС‚РєР° Р±СѓС„РµСЂР°
 
-        // Создание объектов
+        // РЎРѕР·РґР°РЅРёРµ РѕР±СЉРµРєС‚РѕРІ
         Person person = new Person(name, surname, birthYear);
         Car car = new Car(brand, carYear, engineVolume);
         Book book = new Book(title, author, bookYear);
 
-        // Вывод информации
-        System.out.println("\nРезультаты:");
+        // Р’С‹РІРѕРґ РёРЅС„РѕСЂРјР°С†РёРё
+        System.out.println("\nР РµР·СѓР»СЊС‚Р°С‚С‹:");
         person.displayInfo();
         car.displayInfo();
         book.displayInfo();
